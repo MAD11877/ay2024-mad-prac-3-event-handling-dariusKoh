@@ -46,9 +46,9 @@ public class ListActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int id){
                         int randomInt = new Random().nextInt(1000000);
 
-                        Intent mainActivity = new Intent(ListActivity.this, MainActivity.class);
-                        mainActivity.putExtra("Integer", randomInt);
-                        startActivity(mainActivity);
+                        Intent intentMainActivity = new Intent(ListActivity.this, MainActivity.class);
+                        intentMainActivity.putExtra("Integer", randomInt);
+                        startActivity(intentMainActivity);
                     }
                 });
 

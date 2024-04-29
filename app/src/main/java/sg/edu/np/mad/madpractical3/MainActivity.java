@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         Button btnFollow = findViewById(R.id.btnFollow);
+        Button btnMessage = findViewById(R.id.btnMessage);
 
         // Set the TextViews with the User's name, description and default button message
         tvName.setText(user.name);
@@ -55,8 +56,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Intent recieveListActivity = getIntent();
-        int randomInt = recieveListActivity.getIntExtra("Integer",0);
+        btnMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentMessageGroup = new Intent(MainActivity.this, MessageGroup.class);
+                startActivity(intentMessageGroup);
+            }
+        });
+
+        Intent recieveIntentListActivity = getIntent();
+        int randomInt = recieveIntentListActivity.getIntExtra("Integer",0);
         tvName.setText("User " + Integer.toString(randomInt));
     }
 }

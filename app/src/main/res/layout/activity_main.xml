@@ -112,12 +112,12 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintStart_toEndOf="@+id/btnMessage"
             app:layout_constraintTop_toBottomOf="@+id/tvDescription"
             />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnMessage"
 
             android:layout_width="20mm"
             android:layout_height="8mm"
